@@ -1,6 +1,7 @@
 from aylienapiclient import textapi
+import api_access
 
-client = textapi.Client("e8236a4b", "b1aa1bfbad32a44841f007d29848213f")
+client = textapi.Client(api_access.id, api_access.key)
 
 sentiment = client.Sentiment({'text': 'Jhon is a very good football player'})
 print sentiment
